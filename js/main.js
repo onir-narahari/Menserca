@@ -1,4 +1,39 @@
 (function () {
+  function initLanguageToggle() {
+    if (!window.MensercaI18n) return;
+    var headerInner = document.querySelector(".site-header__inner");
+    if (!headerInner) return;
+
+    function makeToggle(className) {
+      var btn = document.createElement("button");
+      btn.type = "button";
+      btn.className = className;
+      btn.setAttribute("data-lang-toggle", "true");
+      btn.textContent = "EN";
+      btn.addEventListener("click", function () {
+        var next = window.MensercaI18n.getLanguage() === "en" ? "es" : "en";
+        window.MensercaI18n.setLanguage(next);
+      });
+      return btn;
+    }
+
+    if (!headerInner.querySelector(".lang-toggle")) {
+      headerInner.appendChild(makeToggle("lang-toggle"));
+    }
+
+    var drawer = document.getElementById("nav-drawer");
+    if (drawer && !drawer.querySelector(".lang-toggle--mobile")) {
+      var shell = document.createElement("div");
+      shell.className = "lang-toggle-mobile-shell";
+      shell.appendChild(makeToggle("lang-toggle lang-toggle--mobile"));
+      drawer.appendChild(shell);
+    }
+
+    window.MensercaI18n.applyTranslations(document);
+  }
+
+  initLanguageToggle();
+
   var header = document.querySelector(".site-header");
 
   if (header) {
