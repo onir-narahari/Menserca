@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Card system, MENSERCA design</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="../css/tokens.css" />
+    <link rel="stylesheet" href="../css/base.css" />
+    <link rel="stylesheet" href="../css/components.css" />
+    <style>
+      .nav-toggle {
+        display: none;
+      }
+      .design-cards__home {
+        display: none;
+      }
+      @media (max-width: 1023px) {
+        .site-header .nav-primary {
+          display: none;
+        }
+        .design-cards__home {
+          display: block !important;
+          margin: 0;
+          font-weight: 600;
+        }
+      }
+      .design-note {
+        font-size: var(--fs-caption);
+        color: var(--color-steel);
+        max-width: 60ch;
+        margin-bottom: 2rem;
+      }
+      .showcase-row {
+        display: grid;
+        gap: var(--gutter-card-lg);
+        grid-template-columns: 1fr;
+        align-items: stretch;
+      }
+      @media (min-width: 900px) {
+        .showcase-row {
+          grid-template-columns: repeat(3, 1fr);
+        }
+      }
+    </style>
+  </head>
+  <body class="design-cards">
+    <header class="site-header">
+      <div class="site-header__inner">
+        <a class="logo" href="../index.html"><img src="../images/logo-menserca.png" alt="MENSERCA, Méndez Servicios, C.A." width="200" height="80" decoding="async" /></a>
+        <a class="design-cards__home" href="../index.html">Home</a>
+        <nav class="nav-primary" aria-label="Primary">
+          <a href="../index.html">Home</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="content-well" style="padding-block: 3rem">
+      <h1 class="h1">Reusable card system</h1>
+      <p class="design-note">
+        One family: shared radius, padding (24px / 28–32px large), hairline border or soft shadow, hover lift on interactive cards only. Metric cards stay static. Equal-height rows via grid + <code>height:100%</code> on cards.
+      </p>
+
+      <header class="section-head">
+        <p class="eyebrow">Capability</p>
+        <h2 class="h2" style="font-size: var(--fs-h2)">Capability card</h2>
+        <p class="section-intro">Media 16:10, H3 title, three bullets, footer link.</p>
+      </header>
+      <div class="showcase-row" style="margin-bottom: 4rem">
+        <a class="card" href="../capability-engineering.html">
+          <div class="card__media" aria-hidden="true"></div>
+          <div class="card__body">
+            <h3 class="card__title">Engineering</h3>
+            <ul class="card__list">
+              <li>FEED, basic &amp; detailed design</li>
+              <li>HAZOP / LOPA, simulation</li>
+              <li>ASME, API, ISO basis</li>
+            </ul>
+            <div class="card__footer">
+              <span class="card__link">Explore</span>
+            </div>
+          </div>
+        </a>
+        <a class="card" href="../capability-procurement-logistics.html">
+          <div class="card__media" aria-hidden="true"></div>
+          <div class="card__body">
+            <h3 class="card__title">Procurement &amp; Logistics</h3>
+            <ul class="card__list">
+              <li>Global sourcing</li>
+              <li>Multimodal logistics</li>
+              <li>QA/QC &amp; nationalization</li>
+            </ul>
+            <div class="card__footer">
+              <span class="card__link">Explore</span>
+            </div>
+          </div>
+        </a>
+        <a class="card" href="../capability-mechanical-integrity.html">
+          <div class="card__media" aria-hidden="true"></div>
+          <div class="card__body">
+            <h3 class="card__title">Mechanical &amp; Integrity</h3>
+            <ul class="card__list">
+              <li>Fabrication &amp; welding</li>
+              <li>Rotating equipment</li>
+              <li>Pipeline integrity</li>
+            </ul>
+            <div class="card__footer">
+              <span class="card__link">Explore</span>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <header class="section-head">
+        <p class="eyebrow">Project</p>
+        <h2 style="font-size: var(--fs-h2); margin: 0 0 0.75rem">Project card</h2>
+        <p class="section-intro">Same media ratio, 2–3 line summary, tag + link in footer row.</p>
+      </header>
+      <div class="showcase-row" style="margin-bottom: 4rem">
+        <a class="card" href="../projects.html">
+          <div class="card__media" aria-hidden="true"></div>
+          <div class="card__body">
+            <h3 class="card__title">Petro Independencia</h3>
+            <p class="card__text">Wellpad / Pad 5, civil &amp; electrical infrastructure, and production support.</p>
+            <div class="card__footer">
+              <span class="card__tag">PI</span>
+              <span class="card__link">View project</span>
+            </div>
+          </div>
+        </a>
+        <a class="card" href="../projects.html">
+          <div class="card__media" aria-hidden="true"></div>
+          <div class="card__body">
+            <h3 class="card__title">Petro Boscán</h3>
+            <p class="card__text">Large-scale line replacement, preventive maintenance, and asset management.</p>
+            <div class="card__footer">
+              <span class="card__tag">PB</span>
+              <span class="card__link">View project</span>
+            </div>
+          </div>
+        </a>
+        <a class="card" href="../projects.html">
+          <div class="card__media" aria-hidden="true"></div>
+          <div class="card__body">
+            <h3 class="card__title">TBG</h3>
+            <p class="card__text">Environmental remediation, coastal recovery, and regulatory compliance.</p>
+            <div class="card__footer">
+              <span class="card__tag">TBG</span>
+              <span class="card__link">View project</span>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <header class="section-head">
+        <p class="eyebrow">Metrics</p>
+        <h2 style="font-size: var(--fs-h2); margin: 0 0 0.75rem">Metric card</h2>
+        <p class="section-intro">Dominant number, label (H3 scale), optional qualifier , centered; no lift hover.</p>
+      </header>
+      <div class="grid-cards grid-cards--metrics">
+        <div class="card card--metric">
+          <p class="card__stat">34+</p>
+          <h3 class="card__title">Years</h3>
+          <p class="card__qualifier">Industrial contracting</p>
+        </div>
+        <div class="card card--metric">
+          <p class="card__stat">1.2M+</p>
+          <h3 class="card__title">Man-hours</h3>
+          <p class="card__qualifier">Field execution</p>
+        </div>
+        <div class="card card--metric">
+          <p class="card__stat">300+</p>
+          <h3 class="card__title">Employees</h3>
+          <p class="card__qualifier">Technical workforce</p>
+        </div>
+      </div>
+
+      <p style="margin-top: 3rem">
+        <a href="../index.html">← Back to site</a>
+      </p>
+    </main>
+
+    <footer class="site-footer">
+      <div class="content-well site-footer__grid">
+        <div class="site-footer__brand">
+          <p class="site-footer__name">MENSERCA</p>
+          <p class="site-footer__tagline">Industrial contractor providing engineering, procurement, construction, and maintenance services.</p>
+        </div>
+        <nav class="site-footer__nav" aria-label="Footer">
+          <p class="site-footer__nav-title">Navigate</p>
+          <ul class="site-footer__links">
+            <li><a href="../capabilities.html">Capabilities</a></li>
+            <li><a href="../projects.html">Projects</a></li>
+            <li><a href="../contact.html">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="site-footer__cta-bar">
+        <a class="site-footer__cta" href="../contact.html">Contact</a>
+      </div>
+    </footer>
+  </body>
+</html>

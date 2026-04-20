@@ -1,0 +1,177 @@
+/**
+ * Safety & Sustainability page — structured layout, imagery, KPI band
+ */
+
+/* Full-bleed sections: main has no side padding */
+.page-safety > * {
+  width: 100%;
+}
+
+.page-safety .content-well {
+  width: 100%;
+  max-width: var(--content-max);
+  margin-inline: auto;
+  padding-inline: clamp(1.25rem, 4vw, 2rem);
+}
+
+/* ——— HSE split (text left, image right on desktop) ——— */
+.visual-split--safety .visual-split__body {
+  max-width: none;
+  padding: clamp(2.25rem, 5vw, 3.5rem) clamp(1.25rem, 4vw, 2rem) clamp(2.25rem, 5vw, 3.5rem) clamp(1.25rem, 4vw, 2rem);
+}
+
+@media (min-width: 900px) {
+  .visual-split--safety .visual-split__body {
+    padding-inline: clamp(1.5rem, 4vw, 2.5rem) clamp(2rem, 4vw, 3rem);
+  }
+}
+
+.visual-split--safety .visual-split__body .section-intro {
+  margin-top: 0.75rem;
+}
+
+.visual-split--safety .cert-strip {
+  margin-top: 1.5rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid rgba(0, 43, 91, 0.1);
+}
+
+.visual-split--safety .visual-split__cert-aside {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: clamp(14rem, 30vw, 20rem);
+  padding: clamp(1.25rem, 3.5vw, 2.25rem);
+  background: linear-gradient(165deg, #e8edf2 0%, #f5f7fa 55%, #ffffff 100%);
+}
+
+.visual-split__cert-figure {
+  margin: 0;
+  width: 100%;
+  max-width: min(24rem, 100%);
+  background: var(--color-white);
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid rgba(0, 43, 91, 0.1);
+  box-shadow: 0 10px 32px rgba(0, 43, 91, 0.12);
+}
+
+.visual-split__cert-figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* ——— Pillar cards (equal height, hover) ——— */
+.safety-pillars-wrap {
+  padding-block: clamp(2.75rem, 6vw, 4.25rem);
+  background: var(--color-white);
+}
+
+.safety-pillars-wrap .section-head {
+  margin-bottom: clamp(1.5rem, 3vw, 2rem);
+}
+
+.safety-pillars {
+  display: grid;
+  gap: var(--gutter-card-lg);
+  grid-template-columns: 1fr;
+  align-items: stretch;
+}
+
+@media (min-width: 768px) {
+  .safety-pillars {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.safety-pillar-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  min-height: 100%;
+  padding: var(--pad-card-lg);
+  background: var(--color-white);
+  border: 1px solid rgba(0, 43, 91, 0.1);
+  border-radius: var(--radius-card);
+  box-shadow: var(--shadow-card);
+  transition:
+    transform 0.22s cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 0.22s cubic-bezier(0.22, 1, 0.36, 1),
+    border-color 0.22s ease;
+}
+
+.safety-pillar-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 14px 32px rgba(0, 43, 91, 0.11);
+  border-color: rgba(0, 43, 91, 0.14);
+}
+
+.safety-pillar-card h3 {
+  margin: 0 0 0.75rem;
+  font-size: 1.0625rem;
+  font-weight: 700;
+  color: var(--color-navy);
+  line-height: var(--lh-heading);
+}
+
+.safety-pillar-card ul {
+  margin: 0;
+  padding-left: 1.1rem;
+  flex: 1;
+  font-size: var(--fs-body);
+  line-height: var(--lh-body);
+  color: var(--color-steel);
+}
+
+.safety-pillar-card li + li {
+  margin-top: 0.35rem;
+}
+
+/* ——— KPI band — one system on unified surface ——— */
+.safety-kpi-band {
+  padding-block: clamp(2.75rem, 6vw, 4.5rem);
+  background: linear-gradient(180deg, var(--color-gray-bg) 0%, #eef1f5 100%);
+  border-block: 1px solid rgba(0, 43, 91, 0.06);
+}
+
+.safety-kpi-band .section-head {
+  margin-bottom: clamp(1.5rem, 3vw, 2.25rem);
+}
+
+.safety-kpi-grid {
+  display: grid;
+  gap: var(--gutter-card-lg);
+  grid-template-columns: 1fr;
+  max-width: 56rem;
+  margin-inline: auto;
+}
+
+@media (min-width: 640px) {
+  .safety-kpi-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.safety-kpi-band .card--metric {
+  height: 100%;
+  margin: 0;
+  border: 1px solid rgba(0, 43, 91, 0.08);
+  transition:
+    transform 0.22s cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 0.22s cubic-bezier(0.22, 1, 0.36, 1),
+    border-color 0.22s ease;
+}
+
+.safety-kpi-band .card--metric:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 14px 32px rgba(0, 43, 91, 0.1);
+  border-color: rgba(0, 43, 91, 0.12);
+}
+
+/* Section rhythm */
+.page-safety .cap-cta {
+  margin-top: 0;
+}
+
+/* Hero video: shared rules in css/capability-page.css (.cap-page-hero--has-video) */

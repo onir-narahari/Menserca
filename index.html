@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>MENSERCA | Industrial EPC &amp; Field Services</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/tokens.css" />
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/components.css" />
+    <link rel="stylesheet" href="css/homepage.css" />
+  </head>
+  <body>
+    <a class="sr-only" href="#main">Skip to content</a>
+
+    <header class="site-header">
+      <div class="site-header__inner">
+        <a class="logo" href="index.html"><img src="images/logo-menserca.png" alt="MENSERCA, Méndez Servicios, C.A." width="200" height="80" decoding="async" /></a>
+        <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="nav-drawer" aria-label="Open menu">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M4 6h16M4 12h16M4 18h16" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+          </svg>
+        </button>
+        <nav class="nav-primary" aria-label="Primary">
+          <a href="index.html" aria-current="page">Home</a>
+          <a href="about.html">About</a>
+          <div class="nav-item--mega">
+            <button type="button" aria-expanded="false" aria-haspopup="true" aria-controls="mega-capabilities">
+              Capabilities <span class="chevron" aria-hidden="true"></span>
+            </button>
+            <div id="mega-capabilities" class="mega" role="region" aria-label="Capabilities">
+              <div class="mega__grid">
+                <a class="mega__link" href="capability-engineering.html"><strong>Engineering</strong><span>Conceptual through detailed; FEED, HAZOP, BIM</span></a>
+                <a class="mega__link" href="capability-procurement-logistics.html"><strong>Procurement &amp; Logistics</strong><span>Global sourcing, QA/QC, door-to-door</span></a>
+                <a class="mega__link" href="capability-construction-infrastructure.html"><strong>Construction &amp; Infrastructure</strong><span>Civil, structural, pads, earthworks</span></a>
+                <a class="mega__link" href="capability-mechanical-integrity.html"><strong>Mechanical &amp; Integrity</strong><span>Fabrication, rotating equipment, pipelines</span></a>
+                <a class="mega__link" href="capability-electrical-instrumentation-automation.html"><strong>Electrical, Instrumentation &amp; Automation</strong><span>Substations, MCC, control systems</span></a>
+                <a class="mega__link" href="capability-industrial-maintenance.html"><strong>Industrial Maintenance</strong><span>Shutdowns, static &amp; rotating assets</span></a>
+                <a class="mega__link" href="capability-field-operations.html"><strong>Field Operations</strong><span>Multidiscipline execution, remediation</span></a>
+                <a class="mega__link" href="capability-industrial-utility-systems.html"><strong>Industrial Utility Systems</strong><span>Piping, steam, cooling, water, gas</span></a>
+              </div>
+            </div>
+          </div>
+          <a href="projects.html">Projects</a>
+          <a href="safety.html">Safety &amp; Sustainability</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <div id="nav-drawer-backdrop" class="nav-drawer__backdrop" aria-hidden="true"></div>
+    <nav id="nav-drawer" class="nav-drawer" aria-label="Mobile" aria-hidden="true">
+      <button type="button" data-drawer-close style="margin-bottom:1rem;border:none;background:none;font-weight:700;cursor:pointer">Close</button>
+      <a class="drawer-link" href="index.html">Home</a>
+      <a class="drawer-link" href="about.html">About</a>
+      <div class="drawer-accordion">
+        <button type="button" aria-expanded="false">Capabilities <span aria-hidden="true">+</span></button>
+        <div class="drawer-accordion__panel">
+          <a href="capability-engineering.html">Engineering</a>
+          <a href="capability-procurement-logistics.html">Procurement &amp; Logistics</a>
+          <a href="capability-construction-infrastructure.html">Construction &amp; Infrastructure</a>
+          <a href="capability-mechanical-integrity.html">Mechanical &amp; Integrity</a>
+          <a href="capability-electrical-instrumentation-automation.html">Electrical, Instrumentation &amp; Automation</a>
+          <a href="capability-industrial-maintenance.html">Industrial Maintenance</a>
+          <a href="capability-field-operations.html">Field Operations</a>
+          <a href="capability-industrial-utility-systems.html">Industrial Utility Systems</a>
+        </div>
+      </div>
+      <a class="drawer-link" href="projects.html">Projects</a>
+      <a class="drawer-link" href="safety.html">Safety &amp; Sustainability</a>
+      <a class="drawer-link" href="contact.html">Contact</a>
+    </nav>
+
+    <main id="main" class="page-home">
+      <!-- 1. Hero , preview construction photo (swap URL when you have final assets) -->
+      <section
+        class="hero has-video"
+        aria-label="Introduction"
+        style="--hero-media-image: url('https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&amp;fit=crop&amp;w=1920&amp;h=1080&amp;q=80');"
+      >
+        <video
+          class="hero__video"
+          autoplay
+          muted
+          loop
+          playsinline
+          preload="auto"
+          disablepictureinpicture
+          aria-hidden="true"
+        >
+          <source src="videos/home-hero.mp4" type="video/mp4" />
+        </video>
+        <div class="hero__media" aria-hidden="true"></div>
+        <div class="hero__overlay" aria-hidden="true"></div>
+        <div class="hero__content">
+          <h1 class="h1">34 Years Leading Operational Excellence in the Energy Industry</h1>
+          <p class="hero__sub">
+            Multidisciplinary engineering, procurement, construction, and industrial maintenance under international quality and safety standards.
+          </p>
+          <div class="btn-row">
+            <a class="btn btn--primary" href="#cap-heading">Explore technical capabilities</a>
+            <a class="btn btn--ghost" href="contact.html">Contact</a>
+          </div>
+          <p class="hero__commitment">Committed to excellence in every project</p>
+        </div>
+      </section>
+
+      <!-- 2. About , preview photos via CSS variables -->
+      <section
+        class="band-split band-split--layered"
+        aria-labelledby="about-heading"
+        style="
+          --band-split-photo-a: url('../images/home-about-construction.png');
+          --band-split-photo-b: url('../images/home-about-photo-a.png');
+        "
+      >
+        <div class="band-split__visual" aria-hidden="true">
+          <div class="band-split__frame-deco"></div>
+          <div class="band-split__collage">
+            <div class="band-split__photo band-split__photo--a"></div>
+            <div class="band-split__photo band-split__photo--b"></div>
+          </div>
+        </div>
+        <div class="band-split__content">
+          <p class="eyebrow">Who we are</p>
+          <h2 id="about-heading">About MENSERCA</h2>
+          <ul class="band-split__chips" aria-label="Highlights">
+            <li>Founded 1992</li>
+            <li>34+ years</li>
+            <li>EPC + maintenance</li>
+            <li>Oil, gas &amp; infrastructure</li>
+          </ul>
+          <p class="band-split__lead">
+            Founded in 1992, Méndez Servicios, C.A. is an industrial contractor with 34+ years supporting oil &amp; gas and infrastructure by integrating personnel, heavy equipment, logistics, and field execution.
+          </p>
+          <div class="prose">
+            <p>
+              We deliver engineering, procurement, construction, maintenance, and on-site execution for energy and infrastructure projects. Safety, efficiency, and operational delivery guide every engagement.
+            </p>
+          </div>
+          <div class="btn-row">
+            <a class="btn btn--pill-light" href="about.html">About us</a>
+            <a class="btn btn--ghost" href="contact.html">Contact</a>
+
+      </section>
+
+      <!-- 3. KPI section -->
+      <section
+        class="section section--chapter home-kpi"
+        aria-labelledby="kpi-heading"
+        style="--home-kpi-ambient: url('https://images.unsplash.com/photo-1489515217757-5fd1be406fef?auto=format&amp;fit=crop&amp;w=1600&amp;h=900&amp;q=80');"
+      >
+        <div class="content-well">
+          <header class="section-head">
+            <p class="eyebrow">Scale</p>
+            <h2 id="kpi-heading">Operational capacity</h2>
+            <p class="section-intro">Figures that reflect field hours, fleet, logistics reach, and workforce depth, structured for serious industrial clients.</p>
+          </header>
+          <div class="grid-cards grid-cards--metrics">
+            <div class="card card--metric">
+              <p class="card__stat">34+</p>
+              <h3 class="card__title">Years of experience</h3>
+              <p class="card__qualifier">Uninterrupted industrial contracting</p>
+            </div>
+            <div class="card card--metric">
+              <p class="card__stat">1.2M+</p>
+              <h3 class="card__title">Man-hours worked</h3>
+              <p class="card__qualifier">Demonstrated execution volume</p>
+            </div>
+            <div class="card card--metric">
+              <p class="card__stat">300+</p>
+              <h3 class="card__title">Qualified employees</h3>
+              <p class="card__qualifier">Technical &amp; field workforce</p>
+            </div>
+            <div class="card card--metric">
+              <p class="card__stat">102</p>
+              <h3 class="card__title">Heavy machines</h3>
+              <p class="card__qualifier">Earthworks &amp; industrial support</p>
+            </div>
+            <div class="card card--metric">
+              <p class="card__stat">50</p>
+              <h3 class="card__title">Light vehicles</h3>
+              <p class="card__qualifier">National logistics footprint</p>
+            </div>
+            <div class="card card--metric">
+              <p class="card__stat">3.5M+ km</p>
+              <h3 class="card__title">Logistics deployment</h3>
+              <p class="card__qualifier">National coverage</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 4. Capabilities preview , bento rail cards -->
+      <section
+        class="section section--tight home-cap-section"
+        aria-labelledby="cap-heading"
+        style="--home-cap-ambient: url('https://images.unsplash.com/photo-1523419409543-0c4d75b5d9a0?auto=format&amp;fit=crop&amp;w=1600&amp;h=1000&amp;q=80');"
+      >
+        <div class="content-well">
+          <header class="section-head">
+            <p class="eyebrow">What we execute</p>
+            <h2 id="cap-heading">Capabilities</h2>
+            <p class="section-intro">EPC-aligned domains from engineering through field operations. Each with dedicated technical depth.</p>
+          </header>
+          <div class="home-cap-bento home-cap-reveal">
+            <a class="home-cap-bento__card" href="capability-engineering.html">
+              <span class="home-cap-bento__rail" aria-hidden="true"></span>
+              <div class="home-cap-bento__main">
+                <h3>Engineering</h3>
+                <ul class="home-cap-bento__list">
+                  <li>FEED, basic &amp; detailed design</li>
+                  <li>HAZOP / LOPA, simulation, BIM</li>
+                  <li>ASME, API, ISO design basis</li>
+                </ul>
+                <div class="home-cap-bento__foot"><span class="home-cap-bento__link">Explore</span></div>
+              </div>
+            </a>
+            <a class="home-cap-bento__card" href="capability-procurement-logistics.html">
+              <span class="home-cap-bento__rail" aria-hidden="true"></span>
+              <div class="home-cap-bento__main">
+                <h3>Procurement &amp; Logistics</h3>
+                <ul class="home-cap-bento__list">
+                  <li>Global sourcing &amp; multimodal logistics</li>
+                  <li>QA/QC, nationalization support</li>
+                  <li>Specialized technical procurement</li>
+                </ul>
+                <div class="home-cap-bento__foot"><span class="home-cap-bento__link">Explore</span></div>
+              </div>
+            </a>
+            <a class="home-cap-bento__card" href="capability-construction-infrastructure.html">
+              <span class="home-cap-bento__rail" aria-hidden="true"></span>
+              <div class="home-cap-bento__main">
+                <h3>Construction &amp; Infrastructure</h3>
+                <ul class="home-cap-bento__list">
+                  <li>Industrial civil &amp; structural</li>
+                  <li>Pads, earthworks, site development</li>
+                  <li>Field supervision &amp; QC</li>
+                </ul>
+                <div class="home-cap-bento__foot"><span class="home-cap-bento__link">Explore</span></div>
+              </div>
+            </a>
+            <a class="home-cap-bento__card" href="capability-mechanical-integrity.html">
+              <span class="home-cap-bento__rail" aria-hidden="true"></span>
+              <div class="home-cap-bento__main">
+                <h3>Mechanical &amp; Integrity</h3>
+                <ul class="home-cap-bento__list">
+                  <li>Fabrication, welding, commissioning</li>
+                  <li>Rotating equipment &amp; tanks</li>
+                  <li>Integrity restoration &amp; life extension</li>
+                </ul>
+                <div class="home-cap-bento__foot"><span class="home-cap-bento__link">Explore</span></div>
+              </div>
+            </a>
+            <a class="home-cap-bento__card" href="capability-electrical-instrumentation-automation.html">
+              <span class="home-cap-bento__rail" aria-hidden="true"></span>
+              <div class="home-cap-bento__main">
+                <h3>Electrical, Instrumentation &amp; Automation</h3>
+                <ul class="home-cap-bento__list">
+                  <li>Substations &amp; distribution</li>
+                  <li>Wellpad electrification, MCC</li>
+                  <li>Control, protection &amp; integration</li>
+                </ul>
+                <div class="home-cap-bento__foot"><span class="home-cap-bento__link">Explore</span></div>
+              </div>
+            </a>
+            <a class="home-cap-bento__card" href="capability-industrial-maintenance.html">
+              <span class="home-cap-bento__rail" aria-hidden="true"></span>
+              <div class="home-cap-bento__main">
+                <h3>Industrial maintenance</h3>
+                <ul class="home-cap-bento__list">
+                  <li>Shutdown planning &amp; execution</li>
+                  <li>Static &amp; rotating equipment</li>
+                  <li>Predictive tools &amp; asset care</li>
+                </ul>
+                <div class="home-cap-bento__foot"><span class="home-cap-bento__link">Explore</span></div>
+              </div>
+            </a>
+          </div>
+          <p style="margin-top:1.5rem;text-align:center">
+            Including <a href="capability-field-operations.html">Field operations</a> &amp; <a href="capability-industrial-utility-systems.html">Industrial utility systems</a>
+          </p>
+        </div>
+      </section>
+
+      <!-- 5. Safety preview , Petroboscán recognitions (stacked in one frame) -->
+      <section class="section section--tight home-safety-editorial" aria-labelledby="safety-heading">
+        <div class="content-well home-safety-editorial__grid">
+          <div class="home-safety-editorial__visual home-safety-editorial__visual--certs">
+            <div class="home-safety-editorial__frame" aria-hidden="true"></div>
+            <div class="home-safety-editorial__certs-shell">
+              <figure class="home-safety-editorial__cert">
+                <img
+                  src="images/cert-recognition-petroboscan-incidents.png"
+                  alt="PetroBoscán recognition for participation in the Learning from Incidents campaign; 268 days without disabling injuries, October 2025."
+                  width="640"
+                  height="480"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </figure>
+              <figure class="home-safety-editorial__cert">
+                <img
+                  src="images/cert-recognition-petroboscan-rce.png"
+                  alt="PetroBoscán recognition for participation in contractor emergency response and control (RCE) activities."
+                  width="640"
+                  height="480"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </figure>
+            </div>
+          </div>
+          <div class="home-safety-editorial__copy">
+            <p class="eyebrow">Commitment</p>
+            <h2 id="safety-heading">Safety &amp; sustainability</h2>
+            <p class="home-safety-editorial__lead">Certified management systems and disciplined HSE performance. Environmental responsibility and operational integrity are first-class.</p>
+            <div class="cert-strip" role="list">
+              <span role="listitem">ISO 9001</span>
+              <span role="listitem">ISO 14001</span>
+              <span role="listitem">ISO 45001</span>
+            </div>
+            <ul class="home-safety-editorial__points">
+              <li>
+                <span class="home-safety-editorial__check" aria-hidden="true"></span>
+                <span>Zero fatalities; zero lost-time injuries (reporting window per company records)</span>
+              </li>
+              <li>
+                <span class="home-safety-editorial__check" aria-hidden="true"></span>
+                <span>Operational risk evaluation and strict PPE / lifting protocols</span>
+              </li>
+              <li>
+                <span class="home-safety-editorial__check" aria-hidden="true"></span>
+                <span>Remediation, decarbonization focus, and local content commitment</span>
+              </li>
+            </ul>
+            <div class="btn-row">
+              <a class="btn btn--primary" href="safety.html">Safety &amp; sustainability</a>
+              <a class="btn btn--secondary" href="contact.html">Contact</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 6. Projects preview , three centered cards (photo + title + copy) -->
+      <section class="section section--tight home-projects home-projects--compact" aria-labelledby="proj-heading">
+        <div class="content-well">
+          <header class="section-head">
+            <p class="eyebrow">Experience</p>
+            <h2 id="proj-heading">Projects in execution</h2>
+            <p class="section-intro">Active programs across major operating areas, including civil, electrical, mechanical, integrity, and environmental scopes.</p>
+          </header>
+          <div class="home-projects-trio home-cap-reveal">
+            <a class="home-projects-trio__card" href="projects.html#pi" aria-label="Petro Independencia, view projects">
+              <div class="home-projects-trio__thumb">
+                <img
+                  src="images/project-petro-independencia.jpg"
+                  alt="Petro Independencia, paving and civil infrastructure works"
+                  width="360"
+                  height="240"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+              <h3>Petro Independencia</h3>
+              <p>Wellpad / Pad 5, civil &amp; electrical infrastructure, production machinery support, and well optimization services.</p>
+            </a>
+            <a class="home-projects-trio__card" href="projects.html#pb" aria-label="Petro Boscán, view projects">
+              <div class="home-projects-trio__thumb">
+                <img
+                  src="images/project-petro-boscan.jpg"
+                  alt="Petro Boscán, pipeline installation and trenching along a road corridor"
+                  width="360"
+                  height="240"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+              <h3>Petro Boscán</h3>
+              <p>Large-scale corroded line replacement, preventive maintenance, asset management, storage optimization, decarbonization.</p>
+            </a>
+            <a class="home-projects-trio__card" href="projects.html#tbg" aria-label="TBG, view projects">
+              <div class="home-projects-trio__thumb">
+                <img
+                  src="images/home-about-photo-b.png"
+                  alt="TBG, field team and community environmental work"
+                  width="360"
+                  height="240"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+              <h3>TBG</h3>
+              <p>Environmental remediation, coastal recovery, critical-zone intervention, compliance, and community commitment.</p>
+            </a>
+          </div>
+          <p class="home-projects-trio__footer">
+            <a href="projects.html">Full projects portfolio</a>
+          </p>
+        </div>
+      </section>
+
+      <!-- 7. Closing CTA , immersive band -->
+      <section
+        class="home-cta-immersive"
+        aria-labelledby="cta-heading"
+        style="--cta-hero-media-image: url('https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?auto=format&amp;fit=crop&amp;w=1920&amp;h=1080&amp;q=80');"
+      >
+        <div class="home-cta-immersive__media" aria-hidden="true"></div>
+        <div class="home-cta-immersive__overlay" aria-hidden="true"></div>
+        <div class="content-well">
+          <h2 id="cta-heading">Technical support, engineering, or field execution?</h2>
+          <p class="section-intro">Contact MENSERCA for technical inquiries, procurement support, and industrial projects.</p>
+          <div class="btn-row">
+            <a class="btn btn--primary" href="contact.html">Contact</a>
+            <a class="btn btn--secondary" href="#cap-heading">Technical capabilities</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="content-well site-footer__grid">
+        <div class="site-footer__brand">
+          <p class="site-footer__name">MENSERCA</p>
+          <p class="site-footer__tagline">Industrial contractor providing engineering, procurement, construction, and maintenance services.</p>
+        </div>
+        <nav class="site-footer__nav" aria-label="Footer">
+          <p class="site-footer__nav-title">Navigate</p>
+          <ul class="site-footer__links">
+            <li><a href="capabilities.html">Capabilities</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="site-footer__cta-bar">
+        <a class="site-footer__cta" href="contact.html">Contact</a>
+      </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>

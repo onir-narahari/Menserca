@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Capabilities | MENSERCA</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/tokens.css" />
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/components.css" />
+    <link rel="stylesheet" href="css/capability-page.css" />
+  </head>
+  <body>
+    <a class="sr-only" href="#main">Skip to content</a>
+    <header class="site-header">
+      <div class="site-header__inner">
+        <a class="logo" href="index.html"><img src="images/logo-menserca.png" alt="MENSERCA, Méndez Servicios, C.A." width="200" height="80" decoding="async" /></a>
+        <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="nav-drawer" aria-label="Open menu">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M4 6h16M4 12h16M4 18h16" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+          </svg>
+        </button>
+        <nav class="nav-primary" aria-label="Primary">
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <div class="nav-item--mega">
+            <button type="button" aria-expanded="false" aria-haspopup="true" aria-controls="mega-capabilities">
+              Capabilities <span class="chevron" aria-hidden="true"></span>
+            </button>
+            <div id="mega-capabilities" class="mega" role="region" aria-label="Capabilities">
+              <div class="mega__grid">
+                <a class="mega__link" href="capability-engineering.html"><strong>Engineering</strong><span>Conceptual through detailed; FEED, HAZOP, BIM</span></a>
+                <a class="mega__link" href="capability-procurement-logistics.html"><strong>Procurement &amp; Logistics</strong><span>Global sourcing, QA/QC, door-to-door</span></a>
+                <a class="mega__link" href="capability-construction-infrastructure.html"><strong>Construction &amp; Infrastructure</strong><span>Civil, structural, pads, earthworks</span></a>
+                <a class="mega__link" href="capability-mechanical-integrity.html"><strong>Mechanical &amp; Integrity</strong><span>Fabrication, rotating equipment, pipelines</span></a>
+                <a class="mega__link" href="capability-electrical-instrumentation-automation.html"><strong>Electrical, Instrumentation &amp; Automation</strong><span>Substations, MCC, control systems</span></a>
+                <a class="mega__link" href="capability-industrial-maintenance.html"><strong>Industrial Maintenance</strong><span>Shutdowns, static &amp; rotating assets</span></a>
+                <a class="mega__link" href="capability-field-operations.html"><strong>Field Operations</strong><span>Multidiscipline execution, remediation</span></a>
+                <a class="mega__link" href="capability-industrial-utility-systems.html"><strong>Industrial Utility Systems</strong><span>Piping, steam, cooling, water, gas</span></a>
+              </div>
+            </div>
+          </div>
+          <a href="projects.html">Projects</a>
+          <a href="safety.html">Safety &amp; Sustainability</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <div id="nav-drawer-backdrop" class="nav-drawer__backdrop" aria-hidden="true"></div>
+    <nav id="nav-drawer" class="nav-drawer" aria-label="Mobile" aria-hidden="true">
+      <button type="button" data-drawer-close style="margin-bottom:1rem;border:none;background:none;font-weight:700;cursor:pointer">Close</button>
+      <a class="drawer-link" href="index.html">Home</a>
+      <a class="drawer-link" href="about.html">About</a>
+      <div class="drawer-accordion">
+        <button type="button" aria-expanded="false">Capabilities <span aria-hidden="true">+</span></button>
+        <div class="drawer-accordion__panel">
+          <a href="capability-engineering.html">Engineering</a>
+          <a href="capability-procurement-logistics.html">Procurement &amp; Logistics</a>
+          <a href="capability-construction-infrastructure.html">Construction &amp; Infrastructure</a>
+          <a href="capability-mechanical-integrity.html">Mechanical &amp; Integrity</a>
+          <a href="capability-electrical-instrumentation-automation.html">Electrical, Instrumentation &amp; Automation</a>
+          <a href="capability-industrial-maintenance.html">Industrial Maintenance</a>
+          <a href="capability-field-operations.html">Field Operations</a>
+          <a href="capability-industrial-utility-systems.html">Industrial Utility Systems</a>
+        </div>
+      </div>
+      <a class="drawer-link" href="projects.html">Projects</a>
+      <a class="drawer-link" href="safety.html">Safety &amp; Sustainability</a>
+      <a class="drawer-link" href="contact.html">Contact</a>
+    </nav>
+
+    <main id="main">
+      <div class="content-well cap-hub-hero">
+        <h1 class="h1">Capabilities</h1>
+        <p class="lead">Eight integrated domains, from engineering through utility systems, and each with its own technical scope page.</p>
+      </div>
+
+      <section class="cap-hub-grid" aria-labelledby="cap-grid-heading">
+        <div class="content-well">
+          <header class="section-head">
+            <p class="eyebrow">EPC &amp; execution</p>
+            <h2 id="cap-grid-heading" style="font-size:var(--fs-h2);margin:0">Select a domain</h2>
+            <p class="section-intro">Open the full service layout for procurement, construction, maintenance, field work, and utilities.</p>
+          </header>
+          <div class="grid-cards grid-cards--cap">
+            <a class="card" href="capability-engineering.html">
+              <div class="card__media" aria-hidden="true"></div>
+              <div class="card__body">
+                <h3 class="card__title">Engineering</h3>
+                <ul class="card__list">
+                  <li>Conceptual, basic &amp; detailed</li>
+                  <li>FEED, HAZOP, LOPA, BIM</li>
+                  <li>ASME, API, ISO design basis</li>
+                </ul>
+                <div class="card__footer"><span class="card__link">Open</span></div>
+              </div>
+            </a>
+            <a class="card" href="capability-procurement-logistics.html">
+              <div class="card__media" aria-hidden="true"></div>
+              <div class="card__body">
+                <h3 class="card__title">Procurement &amp; Logistics</h3>
+                <ul class="card__list">
+                  <li>Global sourcing</li>
+                  <li>Multimodal logistics</li>
+                  <li>QA/QC &amp; nationalization</li>
+                </ul>
+                <div class="card__footer"><span class="card__link">Open</span></div>
+              </div>
+            </a>
+            <a class="card" href="capability-construction-infrastructure.html">
+              <div class="card__media" aria-hidden="true"></div>
+              <div class="card__body">
+                <h3 class="card__title">Construction &amp; Infrastructure</h3>
+                <ul class="card__list">
+                  <li>Industrial civil &amp; structural</li>
+                  <li>Pads, earthworks, drainage</li>
+                  <li>Field supervision &amp; QC</li>
+                </ul>
+                <div class="card__footer"><span class="card__link">Open</span></div>
+              </div>
+            </a>
+            <a class="card" href="capability-mechanical-integrity.html">
+              <div class="card__media" aria-hidden="true"></div>
+              <div class="card__body">
+                <h3 class="card__title">Mechanical &amp; Integrity</h3>
+                <ul class="card__list">
+                  <li>Fabrication &amp; welding</li>
+                  <li>Rotating equipment &amp; tanks</li>
+                  <li>Integrity &amp; life extension</li>
+                </ul>
+                <div class="card__footer"><span class="card__link">Open</span></div>
+              </div>
+            </a>
+            <a class="card" href="capability-electrical-instrumentation-automation.html">
+              <div class="card__media" aria-hidden="true"></div>
+              <div class="card__body">
+                <h3 class="card__title">Electrical, Instrumentation &amp; Automation</h3>
+                <ul class="card__list">
+                  <li>Substations &amp; distribution</li>
+                  <li>Wellpad power, MCC, protection</li>
+                  <li>Control &amp; integration</li>
+                </ul>
+                <div class="card__footer"><span class="card__link">Open</span></div>
+              </div>
+            </a>
+            <a class="card" href="capability-industrial-maintenance.html">
+              <div class="card__media" aria-hidden="true"></div>
+              <div class="card__body">
+                <h3 class="card__title">Industrial Maintenance</h3>
+                <ul class="card__list">
+                  <li>Shutdown planning &amp; execution</li>
+                  <li>Static &amp; rotating assets</li>
+                  <li>Predictive &amp; asset management</li>
+                </ul>
+                <div class="card__footer"><span class="card__link">Open</span></div>
+              </div>
+            </a>
+            <a class="card" href="capability-field-operations.html">
+              <div class="card__media" aria-hidden="true"></div>
+              <div class="card__body">
+                <h3 class="card__title">Field Operations</h3>
+                <ul class="card__list">
+                  <li>Multidiscipline field execution</li>
+                  <li>Inspection &amp; environmental sampling</li>
+                  <li>Remediation &amp; site services</li>
+                </ul>
+                <div class="card__footer"><span class="card__link">Open</span></div>
+              </div>
+            </a>
+            <a class="card" href="capability-industrial-utility-systems.html">
+              <div class="card__media" aria-hidden="true"></div>
+              <div class="card__body">
+                <h3 class="card__title">Industrial Utility Systems</h3>
+                <ul class="card__list">
+                  <li>Process piping &amp; flowlines</li>
+                  <li>Steam, cooling, air, gas, water</li>
+                  <li>Long-distance line replacement</li>
+                </ul>
+                <div class="card__footer"><span class="card__link">Open</span></div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section--chapter section--navy" aria-labelledby="hub-cta">
+        <div class="content-well" style="text-align:center">
+          <h2 id="hub-cta" style="font-size:var(--fs-h2);color:#fff;margin:0">Need a bundled EPC scope?</h2>
+          <p class="section-intro" style="margin-inline:auto;margin-top:0.75rem">Tell us which domains apply. Our team routes technical inquiries to the right discipline leads.</p>
+          <div class="btn-row" style="justify-content:center;margin-top:1.5rem">
+            <a class="btn btn--primary" href="contact.html">Contact</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="content-well site-footer__grid">
+        <div class="site-footer__brand">
+          <p class="site-footer__name">MENSERCA</p>
+          <p class="site-footer__tagline">Industrial contractor providing engineering, procurement, construction, and maintenance services.</p>
+        </div>
+        <nav class="site-footer__nav" aria-label="Footer">
+          <p class="site-footer__nav-title">Navigate</p>
+          <ul class="site-footer__links">
+            <li><a href="capabilities.html">Capabilities</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="site-footer__cta-bar">
+        <a class="site-footer__cta" href="contact.html">Contact</a>
+      </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>

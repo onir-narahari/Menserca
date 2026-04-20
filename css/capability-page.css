@@ -1,0 +1,349 @@
+/**
+ * Reusable capability (service) page template — MENSERCA
+ * Hero + intro + service group cards + accordions + CTA
+ */
+
+/* Domain capability pages use <body class="page-capability"> — suppress legacy gradient strip
+   if older cached HTML still contains figure.visual-break (does not affect safety.html). */
+.page-capability figure.visual-break {
+  display: none !important;
+  min-height: 0 !important;
+  margin: 0 !important;
+}
+
+/* ——— Inner page hero ———
+   Optional photo: on .cap-page-hero__media set inline style, e.g.
+   style="--cap-hero-image: url('../images/your-hero.jpg');"
+   Prefer `../images/…` (resolved from this stylesheet in css/) so the file loads
+   whether the site is at domain root or in a subfolder. Root-only `/images/…`
+   can 404 if the app is not served from /. A bare `images/…` resolves as
+   css/images/… and 404s.
+   Full-bleed cover; dark overlay stays on .cap-page-hero__overlay.
+   If unset, the navy gradient stack below is used. */
+.cap-page-hero {
+  position: relative;
+  min-height: min(78vh, 38rem);
+  display: flex;
+  align-items: flex-end;
+  overflow: hidden;
+  background: #141414;
+}
+
+.cap-page-hero__media {
+  position: absolute;
+  inset: 0;
+  background-color: #1a1a1a;
+  /* Comma-free fallback: var(--x, linear-gradient(...)) breaks in some engines when the
+     fallback contains commas. Nested var keeps the photo layer valid when --cap-hero-image is set. */
+  --cap-hero-fallback: linear-gradient(160deg, #3a3a3a 0%, #1a1a1a 45%, #252525 100%);
+  background-image:
+    linear-gradient(135deg, rgba(0, 0, 0, 0.12) 0%, transparent 55%),
+    radial-gradient(ellipse 80% 60% at 70% 40%, rgba(0, 0, 0, 0.06), transparent),
+    var(--cap-hero-image, var(--cap-hero-fallback));
+  background-size: cover;
+  background-position: center;
+}
+
+.cap-page-hero__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.42) 0%,
+    rgba(0, 0, 0, 0.38) 32%,
+    rgba(0, 0, 0, 0.72) 72%,
+    rgba(0, 0, 0, 0.86) 100%
+  );
+}
+
+.cap-page-hero__inner {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: var(--content-max);
+  margin: 0 auto;
+  padding: clamp(3rem, 8vw, 5rem) clamp(1.25rem, 4vw, 2rem) clamp(2.5rem, 6vw, 4rem);
+}
+
+.cap-page-hero .h1 {
+  color: var(--color-white);
+  max-width: 18ch;
+}
+
+@media (min-width: 720px) {
+  .cap-page-hero .h1 {
+    max-width: 22ch;
+  }
+}
+
+@media (min-width: 1024px) {
+  .cap-page-hero .h1 {
+    max-width: none;
+  }
+}
+
+.cap-page-hero__lede {
+  margin: 1rem 0 0;
+  max-width: 40rem;
+  font-size: var(--fs-lead);
+  line-height: 1.55;
+  color: rgba(255, 255, 255, 0.93);
+}
+
+.cap-page-hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1.5rem;
+}
+
+/* ——— Hero: optional full-bleed looping video (hides static __media layer) ——— */
+.cap-page-hero--has-video .cap-page-hero__media {
+  display: none;
+}
+
+.cap-page-hero__video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.cap-page-hero--has-video .cap-page-hero__overlay {
+  z-index: 1;
+}
+
+.cap-page-hero--has-video .cap-page-hero__inner {
+  z-index: 2;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cap-page-hero__video {
+    display: none;
+  }
+
+  .cap-page-hero--has-video .cap-page-hero__media {
+    display: block;
+    background-image: none;
+    background-color: #2a2a2a;
+  }
+}
+
+/* ——— Intro band (2–3 lines max in markup) ——— */
+.cap-intro-band {
+  padding-block: clamp(2.5rem, 5vw, 3.5rem);
+  border-bottom: 1px solid rgba(0, 43, 91, 0.08);
+}
+
+.cap-intro-band .cap-intro-text {
+  margin: 0;
+  max-width: 48rem;
+  font-size: var(--fs-lead);
+  line-height: var(--lh-body);
+  color: var(--color-steel);
+}
+
+.cap-intro-band .cap-intro-text + .cap-intro-text {
+  margin-top: 0.75rem;
+}
+
+/* ——— Section titles on capability pages ——— */
+.cap-section {
+  padding-block: clamp(2.5rem, 5vw, 4rem);
+}
+
+.cap-section--muted {
+  background: var(--color-gray-bg);
+}
+
+.cap-section__head {
+  max-width: var(--measure-max);
+  margin-bottom: clamp(1.5rem, 3vw, 2.25rem);
+}
+
+.cap-section__head h2 {
+  margin: 0 0 0.5rem;
+  font-size: var(--fs-h2);
+  line-height: var(--lh-heading);
+}
+
+.cap-section__head .section-intro {
+  margin: 0;
+}
+
+/* ——— Service group cards (structured, not long prose) ——— */
+.cap-service-grid {
+  display: grid;
+  gap: var(--gutter-card-lg);
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 680px) {
+  .cap-service-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .cap-service-grid--3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.cap-service-card {
+  padding: var(--pad-card-lg);
+  border-radius: var(--radius-card);
+  border: 1px solid rgba(0, 43, 91, 0.12);
+  background: var(--color-white);
+  box-shadow: var(--shadow-card);
+}
+
+.cap-section--muted .cap-service-card {
+  background: var(--color-white);
+}
+
+.cap-service-card h3 {
+  margin: 0 0 0.75rem;
+  font-size: 1.0625rem;
+  font-weight: 700;
+  line-height: var(--lh-heading);
+  color: var(--color-navy);
+}
+
+.cap-service-card ul {
+  margin: 0;
+  padding-left: 1.1rem;
+  color: var(--color-steel);
+  font-size: var(--fs-body);
+  line-height: var(--lh-body);
+}
+
+.cap-service-card li + li {
+  margin-top: 0.35rem;
+}
+
+/* ——— Ribbon ——— */
+.cap-ribbon {
+  margin: 0 auto;
+  max-width: var(--content-max);
+  padding-inline: clamp(1.25rem, 4vw, 2rem);
+  padding-bottom: 0;
+}
+
+.cap-ribbon .ribbon {
+  max-width: none;
+}
+
+/* ——— Accordions block ——— */
+.cap-accordions-wrap {
+  max-width: var(--content-max);
+  margin: 0 auto;
+  padding-inline: clamp(1.25rem, 4vw, 2rem);
+}
+
+.cap-accordions-wrap .cap-layout {
+  margin-top: 0;
+}
+
+/* Exclusive accordions: smooth height where ::details-content is supported */
+@supports (selector(details::details-content)) {
+  .cap-accordions-wrap .clusters details {
+    interpolate-size: allow-keywords;
+  }
+
+  .cap-accordions-wrap .clusters details::details-content {
+    transition:
+      height 0.34s cubic-bezier(0.22, 1, 0.36, 1),
+      opacity 0.28s ease;
+    overflow: clip;
+  }
+
+  .cap-accordions-wrap .clusters details:not([open])::details-content {
+    height: 0;
+    opacity: 0;
+  }
+
+  .cap-accordions-wrap .clusters details[open]::details-content {
+    height: auto;
+    opacity: 1;
+  }
+}
+
+.clusters--dense details {
+  margin-bottom: 0.75rem;
+}
+
+.clusters--dense summary {
+  font-size: 1rem;
+  padding: 1rem 0;
+}
+
+/* ——— Bottom CTA ——— */
+.cap-cta {
+  padding-block: clamp(3rem, 6vw, 4.5rem);
+  text-align: center;
+}
+
+.cap-cta h2 {
+  margin: 0;
+  font-size: var(--fs-h2);
+  line-height: var(--lh-heading);
+  color: var(--color-white);
+}
+
+.cap-cta .section-intro {
+  margin: 0.75rem auto 0;
+}
+
+.cap-cta .btn-row {
+  justify-content: center;
+  margin-top: 1.5rem;
+}
+
+/* ——— Capabilities hub only ——— */
+.cap-hub-hero {
+  padding-block: clamp(2.5rem, 5vw, 3.5rem);
+  background: linear-gradient(180deg, var(--color-gray-bg) 0%, var(--color-white) 100%);
+  border-bottom: 1px solid rgba(0, 43, 91, 0.08);
+}
+
+.cap-hub-hero .h1 {
+  color: var(--color-navy);
+}
+
+.cap-hub-hero .lead {
+  margin: 0.75rem 0 0;
+  max-width: 42rem;
+  color: var(--color-steel);
+}
+
+.cap-hub-grid {
+  padding-block: clamp(2.5rem, 5vw, 4rem);
+}
+
+.cap-hub-grid .grid-cards--cap {
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 640px) {
+  .cap-hub-grid .grid-cards--cap {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1100px) {
+  .cap-hub-grid .grid-cards--cap {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* Hub cards: optional subtle imagery — not dominant */
+.cap-hub-grid .card__media {
+  aspect-ratio: 16 / 9;
+  min-height: 5.5rem;
+  background: linear-gradient(145deg, #eef2f6 0%, #dce4ec 55%, #cfd9e5 100%);
+}

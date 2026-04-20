@@ -1,0 +1,80 @@
+/**
+ * MENSERCA — design tokens (type scale, color, space)
+ * Source: design specification — modular scale, measure, section rhythm.
+ */
+
+:root {
+  /* Brand */
+  --color-navy: #002b5b;
+  --color-navy-dark: #001a38;
+  --color-white: #ffffff;
+  --color-steel: #5a6570;
+  --color-steel-muted: #6b7682;
+  --color-gray-bg: #f4f6f8;
+  /* KPI / light bands — slightly deeper than page white */
+  --color-gray-bg-deep: #e8ecf1;
+  --color-accent: #0077e6;
+  --color-accent-hover: #0060c2;
+  --color-footer-bg: #001529;
+  --color-footer-link: #80b3ff;
+
+  /* Surfaces (homepage rhythm: dark ↔ light alternation) */
+  --surface-dark: #061a2e;
+  --surface-dark-elevated: #071f36;
+  --surface-light: #ffffff;
+  --surface-muted: var(--color-gray-bg);
+  --text-on-dark: #ffffff;
+  --text-on-dark-muted: rgba(255, 255, 255, 0.88);
+  --border-on-dark: rgba(255, 255, 255, 0.12);
+
+  /* Typography — modular scale (ratios ~ H2 62–70% of H1, H3 under H2) */
+  --font-family: "Montserrat", "Roboto", system-ui, sans-serif;
+
+  --fs-caption: clamp(0.6875rem, 0.65rem + 0.2vw, 0.75rem);
+  --fs-body: clamp(0.9375rem, 0.9rem + 0.25vw, 1rem);
+  --fs-lead: clamp(1rem, 0.95rem + 0.35vw, 1.125rem);
+  --fs-h3: clamp(1.125rem, 1rem + 0.55vw, 1.375rem);
+  --fs-h2: clamp(1.5rem, 1.25rem + 1.1vw, 2.25rem);
+  --fs-h1: clamp(2.25rem, 1.6rem + 2.4vw, 3.5rem);
+  /* Hero headline — slightly larger cap on wide screens */
+  --fs-hero-display: clamp(2.35rem, 1.4rem + 3.2vw, 3.85rem);
+  --fs-stat: clamp(2rem, 1.5rem + 2vw, 3rem);
+
+  --lh-tight: 1.15;
+  --lh-heading: 1.2;
+  --lh-body: 1.6;
+  --lh-ui: 1.45;
+
+  --letter-spacing-h1: -0.02em;
+
+  /* Measure */
+  --measure-prose: 65ch;
+  --measure-max: 72ch;
+  --content-max: 75rem; /* ~1200px */
+
+  /* Spacing — section bands */
+  --space-section-y: clamp(3.5rem, 6vw, 5rem);
+  --space-section-y-lg: clamp(4.5rem, 8vw, 6.5rem);
+  --space-intro-to-content: clamp(1.25rem, 2vw, 2.5rem);
+  --space-h2-stack: clamp(3rem, 5vw, 4.5rem);
+  /* Homepage vertical rhythm (plan: tight vs chapter) */
+  --band-tight-y: clamp(2.75rem, 5vw, 4rem);
+  --band-chapter-y: clamp(3.75rem, 7vw, 5.5rem);
+  --band-hero-y: clamp(3.25rem, 8vw, 5.5rem);
+  --hero-min-height: min(88vh, 44rem);
+  --cta-immersive-min-h: min(52vh, 28rem);
+
+  /* Cards */
+  --radius-card: 8px;
+  --pad-card: 1.5rem;
+  --pad-card-lg: clamp(1.5rem, 2vw, 2rem);
+  --gutter-card: 1.5rem;
+  --gutter-card-lg: 2rem;
+  --shadow-card: 0 1px 3px rgba(0, 43, 91, 0.08);
+  --shadow-card-hover: 0 12px 28px rgba(0, 43, 91, 0.12);
+
+  /* Header */
+  --header-h: 4rem;
+  --z-header: 100;
+  --z-mega: 90;
+}

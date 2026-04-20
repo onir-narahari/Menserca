@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>About | MENSERCA</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/tokens.css" />
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/components.css" />
+    <link rel="stylesheet" href="css/about-page.css" />
+  </head>
+  <body class="page-about">
+    <a class="sr-only" href="#main">Skip to content</a>
+    <header class="site-header">
+      <div class="site-header__inner">
+        <a class="logo" href="index.html"><img src="images/logo-menserca.png" alt="MENSERCA, Méndez Servicios, C.A." width="200" height="80" decoding="async" /></a>
+        <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="nav-drawer" aria-label="Open menu">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16" stroke="currentColor" stroke-width="2" stroke-linecap="round" /></svg>
+        </button>
+        <nav class="nav-primary" aria-label="Primary">
+          <a href="index.html">Home</a>
+          <a href="about.html" aria-current="page">About</a>
+          <div class="nav-item--mega">
+            <button type="button" aria-expanded="false" aria-haspopup="true" aria-controls="mega-capabilities">Capabilities <span class="chevron" aria-hidden="true"></span></button>
+            <div id="mega-capabilities" class="mega" role="region">
+              <div class="mega__grid">
+                <a class="mega__link" href="capability-engineering.html"><strong>Engineering</strong><span>FEED, HAZOP, BIM</span></a>
+                <a class="mega__link" href="capability-procurement-logistics.html"><strong>Procurement &amp; Logistics</strong><span>Sourcing &amp; logistics</span></a>
+                <a class="mega__link" href="capability-construction-infrastructure.html"><strong>Construction</strong><span>Civil &amp; infrastructure</span></a>
+                <a class="mega__link" href="capability-mechanical-integrity.html"><strong>Mechanical &amp; Integrity</strong><span>Fabrication &amp; integrity</span></a>
+                <a class="mega__link" href="capability-electrical-instrumentation-automation.html"><strong>Electrical &amp; Automation</strong><span>Power &amp; control</span></a>
+                <a class="mega__link" href="capability-industrial-maintenance.html"><strong>Industrial Maintenance</strong><span>Shutdowns &amp; assets</span></a>
+                <a class="mega__link" href="capability-field-operations.html"><strong>Field Operations</strong><span>Execution &amp; remediation</span></a>
+                <a class="mega__link" href="capability-industrial-utility-systems.html"><strong>Utility Systems</strong><span>Piping &amp; utilities</span></a>
+              </div>
+            </div>
+          </div>
+          <a href="projects.html">Projects</a>
+          <a href="safety.html">Safety &amp; Sustainability</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+      </div>
+    </header>
+    <div id="nav-drawer-backdrop" class="nav-drawer__backdrop" aria-hidden="true"></div>
+    <nav id="nav-drawer" class="nav-drawer" aria-label="Mobile" aria-hidden="true">
+      <button type="button" data-drawer-close style="margin-bottom:1rem;border:none;background:none;font-weight:700;cursor:pointer">Close</button>
+      <a class="drawer-link" href="index.html">Home</a>
+      <a class="drawer-link" href="about.html">About</a>
+      <div class="drawer-accordion">
+        <button type="button" aria-expanded="false">Capabilities <span aria-hidden="true">+</span></button>
+        <div class="drawer-accordion__panel">
+          <a href="capability-engineering.html">Engineering</a>
+          <a href="capability-procurement-logistics.html">Procurement &amp; Logistics</a>
+          <a href="capability-construction-infrastructure.html">Construction &amp; Infrastructure</a>
+          <a href="capability-mechanical-integrity.html">Mechanical &amp; Integrity</a>
+          <a href="capability-electrical-instrumentation-automation.html">Electrical, Instrumentation &amp; Automation</a>
+          <a href="capability-industrial-maintenance.html">Industrial Maintenance</a>
+          <a href="capability-field-operations.html">Field Operations</a>
+          <a href="capability-industrial-utility-systems.html">Industrial Utility Systems</a>
+        </div>
+      </div>
+      <a class="drawer-link" href="projects.html">Projects</a>
+      <a class="drawer-link" href="safety.html">Safety</a>
+      <a class="drawer-link" href="contact.html">Contact</a>
+    </nav>
+
+    <main id="main">
+      <h1 class="sr-only">About MENSERCA</h1>
+
+      <section class="about-section about-overview" data-about-reveal aria-labelledby="overview-heading">
+        <div class="about-inner">
+          <header class="about-section__head">
+            <h2 id="overview-heading">About MENSERCA</h2>
+            <p class="about-section__intro">Industrial contracting with regional reach and deep technical execution.</p>
+          </header>
+          <div class="about-overview__grid">
+            <div class="about-overview__copy">
+              <p>
+                Founded in 1992, MENSERCA is a leading contractor with 34 years of uninterrupted experience in engineering, maintenance, and construction services for the oil and industrial sectors.
+              </p>
+              <p>
+                We deliver comprehensive solutions supported by a highly skilled workforce, advanced technology, and top-tier proprietary equipment.
+              </p>
+              <p>
+                With strong operational foundations in Zulia and Anzoátegui, and a key presence in El Tigre, we are strategically positioned to serve critical energy and industrial projects across the region.
+              </p>
+            </div>
+            <figure class="about-overview__figure">
+              <img
+                src="images/about-facility.jpg"
+                width="1024"
+                height="682"
+                alt="MENSERCA corporate and industrial facility"
+                loading="lazy"
+                decoding="async"
+              />
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <section class="about-section about-capabilities" data-about-reveal aria-labelledby="caps-heading">
+        <div class="about-inner">
+          <header class="about-section__head">
+            <p class="eyebrow">Strength</p>
+            <h2 id="caps-heading">What we bring</h2>
+            <p class="about-section__intro">Technical depth across the full project lifecycle, from design standards through safe field execution.</p>
+          </header>
+          <div class="about-capabilities__grid">
+            <article class="about-cap-card">
+              <div class="about-cap-card__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l9 5-9 5-9-5 9-5z" /><path d="M3 12l9 5 9-5M3 17l9 5 9-5" /></svg>
+              </div>
+              <h3>Engineering excellence</h3>
+              <p>Concept through detailed design, aligned to international codes and your technical basis.</p>
+            </article>
+            <article class="about-cap-card">
+              <div class="about-cap-card__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z" /></svg>
+              </div>
+              <h3>Industrial maintenance</h3>
+              <p>Shutdowns, rotating and static assets, and predictive care for continuous operations.</p>
+            </article>
+            <article class="about-cap-card">
+              <div class="about-cap-card__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18M5 21V7l8-4 8 4v14M9 21v-8h6v8" /></svg>
+              </div>
+              <h3>Construction execution</h3>
+              <p>Civil, structural, and infrastructure delivery with disciplined quality and schedule control.</p>
+            </article>
+            <article class="about-cap-card">
+              <div class="about-cap-card__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M4 14l6-6 4 4 6-8" /><path d="M4 20h16" /></svg>
+              </div>
+              <h3>Advanced equipment</h3>
+              <p>Heavy machinery and logistics aligned to terrain, scope, and productivity targets.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="about-section about-locations" data-about-reveal aria-labelledby="locations-heading">
+        <div class="about-inner">
+          <header class="about-section__head">
+            <p class="eyebrow">Presence</p>
+            <h2 id="locations-heading">Where we operate</h2>
+            <p class="about-section__intro">Regional foundations that keep mobilization and execution responsive.</p>
+          </header>
+          <div class="about-locations__badges">
+            <span class="about-location">Zulia</span>
+            <span class="about-location">Anzoátegui</span>
+            <span class="about-location about-location--featured">El Tigre</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="about-section about-close" data-about-reveal aria-labelledby="close-heading">
+        <div class="about-inner about-close__inner">
+          <h2 id="close-heading" class="sr-only">Our commitment</h2>
+          <p>
+            Clients rely on MENSERCA for proven reliability, depth of experience, and execution at scale, built for long-term partnerships in demanding industrial environments.
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="content-well site-footer__grid">
+        <div class="site-footer__brand">
+          <p class="site-footer__name">MENSERCA</p>
+          <p class="site-footer__tagline">Industrial contractor providing engineering, procurement, construction, and maintenance services.</p>
+        </div>
+        <nav class="site-footer__nav" aria-label="Footer">
+          <p class="site-footer__nav-title">Navigate</p>
+          <ul class="site-footer__links">
+            <li><a href="capabilities.html">Capabilities</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="site-footer__cta-bar">
+        <a class="site-footer__cta" href="contact.html">Contact</a>
+      </div>
+    </footer>
+    <script src="js/main.js"></script>
+    <script src="js/about-page.js"></script>
+  </body>
+</html>

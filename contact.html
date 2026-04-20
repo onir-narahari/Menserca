@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Contact | MENSERCA</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/tokens.css" />
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/components.css" />
+    <style>
+      .contact-grid {
+        display: grid;
+        gap: 1.25rem;
+        grid-template-columns: 1fr;
+      }
+      @media (min-width: 720px) {
+        .contact-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+      .contact-card {
+        padding: var(--pad-card-lg);
+        border: 1px solid rgba(0, 43, 91, 0.12);
+        border-radius: var(--radius-card);
+        background: var(--color-gray-bg);
+      }
+      .contact-card h3 {
+        margin: 0 0 0.5rem;
+        font-size: var(--fs-h3);
+      }
+      .form-shell {
+        margin-top: 2rem;
+        max-width: var(--measure-max);
+        padding: var(--pad-card-lg);
+        border: 1px solid rgba(0, 43, 91, 0.12);
+        border-radius: var(--radius-card);
+      }
+      .form-shell label {
+        display: block;
+        font-weight: 600;
+        font-size: 0.875rem;
+        margin-top: 1rem;
+      }
+      .form-shell input,
+      .form-shell select,
+      .form-shell textarea {
+        width: 100%;
+        margin-top: 0.35rem;
+        padding: 0.6rem 0.75rem;
+        border: 1px solid rgba(0, 43, 91, 0.2);
+        border-radius: 6px;
+        font: inherit;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="site-header__inner">
+        <a class="logo" href="index.html"><img src="images/logo-menserca.png" alt="MENSERCA, Méndez Servicios, C.A." width="200" height="80" decoding="async" /></a>
+        <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="nav-drawer" aria-label="Open menu">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16" stroke="currentColor" stroke-width="2" stroke-linecap="round" /></svg>
+        </button>
+        <nav class="nav-primary" aria-label="Primary">
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <div class="nav-item--mega">
+            <button type="button" aria-expanded="false" aria-haspopup="true" aria-controls="mega-capabilities">Capabilities <span class="chevron" aria-hidden="true"></span></button>
+            <div id="mega-capabilities" class="mega" role="region">
+              <div class="mega__grid">
+                <a class="mega__link" href="capability-engineering.html"><strong>Engineering</strong><span>FEED, HAZOP</span></a>
+                <a class="mega__link" href="capability-procurement-logistics.html"><strong>Procurement</strong><span>Logistics</span></a>
+                <a class="mega__link" href="capability-construction-infrastructure.html"><strong>Construction</strong><span>Infrastructure</span></a>
+                <a class="mega__link" href="capability-mechanical-integrity.html"><strong>Mechanical</strong><span>Integrity</span></a>
+                <a class="mega__link" href="capability-electrical-instrumentation-automation.html"><strong>Electrical</strong><span>Automation</span></a>
+                <a class="mega__link" href="capability-industrial-maintenance.html"><strong>Maintenance</strong><span>Shutdowns</span></a>
+                <a class="mega__link" href="capability-field-operations.html"><strong>Field</strong><span>Operations</span></a>
+                <a class="mega__link" href="capability-industrial-utility-systems.html"><strong>Utilities</strong><span>Systems</span></a>
+              </div>
+            </div>
+          </div>
+          <a href="projects.html">Projects</a>
+          <a href="safety.html">Safety &amp; Sustainability</a>
+          <a href="contact.html" aria-current="page">Contact</a>
+        </nav>
+      </div>
+    </header>
+    <div id="nav-drawer-backdrop" class="nav-drawer__backdrop" aria-hidden="true"></div>
+    <nav id="nav-drawer" class="nav-drawer" aria-label="Mobile" aria-hidden="true">
+      <button type="button" data-drawer-close style="margin-bottom:1rem;border:none;background:none;font-weight:700;cursor:pointer">Close</button>
+      <a class="drawer-link" href="index.html">Home</a>
+      <a class="drawer-link" href="about.html">About</a>
+      <div class="drawer-accordion">
+        <button type="button" aria-expanded="false">Capabilities <span aria-hidden="true">+</span></button>
+        <div class="drawer-accordion__panel">
+          <a href="capability-engineering.html">Engineering</a>
+          <a href="capability-procurement-logistics.html">Procurement &amp; Logistics</a>
+          <a href="capability-construction-infrastructure.html">Construction &amp; Infrastructure</a>
+          <a href="capability-mechanical-integrity.html">Mechanical &amp; Integrity</a>
+          <a href="capability-electrical-instrumentation-automation.html">Electrical, Instrumentation &amp; Automation</a>
+          <a href="capability-industrial-maintenance.html">Industrial Maintenance</a>
+          <a href="capability-field-operations.html">Field Operations</a>
+          <a href="capability-industrial-utility-systems.html">Industrial Utility Systems</a>
+        </div>
+      </div>
+      <a class="drawer-link" href="projects.html">Projects</a>
+      <a class="drawer-link" href="safety.html">Safety</a>
+      <a class="drawer-link" href="contact.html">Contact</a>
+    </nav>
+
+    <main class="content-well section">
+      <div class="page-hero">
+        <h1 class="h1">Contact</h1>
+        <p class="lead">Technical leads for procurement support and industrial projects.</p>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-card">
+          <h3>Eudo Méndez</h3>
+          <p style="margin:0;font-size:0.875rem">Business Director<br /><a href="mailto:emendez@menserca.com">emendez@menserca.com</a><br />0414 3606080</p>
+        </div>
+        <div class="contact-card">
+          <h3>Armando Méndez</h3>
+          <p style="margin:0;font-size:0.875rem">Project Management / General Manager<br /><a href="mailto:amendez@menserca.com">amendez@menserca.com</a><br />0412 5290856</p>
+        </div>
+        <div class="contact-card">
+          <h3>Poliana Lunar</h3>
+          <p style="margin:0;font-size:0.875rem">Administrative / Contracts<br /><a href="mailto:plunar@menserca.com">plunar@menserca.com</a><br />0412 5290859</p>
+        </div>
+        <div class="contact-card">
+          <h3>Franclin Villadiego</h3>
+          <p style="margin:0;font-size:0.875rem">Operations Manager<br /><a href="mailto:fvilladiego@menserca.com">fvilladiego@menserca.com</a><br />+58 412 190 6473</p>
+        </div>
+      </div>
+
+      <div class="form-shell" aria-label="Inquiry form layout">
+        <h2 style="font-size:var(--fs-h2);margin:0 0 0.5rem">Technical inquiry</h2>
+        <p class="section-intro" style="margin-bottom:0">Form layout only. Wireframe fields per brief.</p>
+        <label>Company <input type="text" autocomplete="organization" /></label>
+        <label>Position / job title <input type="text" autocomplete="organization-title" /></label>
+        <label>Sector <select><option>PB</option><option>PI</option><option>TBG</option><option>Other</option></select></label>
+        <label>Service type <input type="text" /></label>
+        <label>Applicable standard <select><option>API</option><option>ASME</option><option>ISO</option><option>Other</option></select></label>
+        <label>Technical message <textarea rows="5"></textarea></label>
+        <div class="btn-row"><button type="button" class="btn btn--primary">Submit (placeholder)</button></div>
+      </div>
+      <p style="margin-top:2rem;font-size:var(--fs-caption);color:var(--color-steel)">MENSERCA focuses its expertise on high-level industrial and energy infrastructure.</p>
+    </main>
+    <footer class="site-footer">
+      <div class="content-well site-footer__grid">
+        <div class="site-footer__brand">
+          <p class="site-footer__name">MENSERCA</p>
+          <p class="site-footer__tagline">Industrial contractor providing engineering, procurement, construction, and maintenance services.</p>
+        </div>
+        <nav class="site-footer__nav" aria-label="Footer">
+          <p class="site-footer__nav-title">Navigate</p>
+          <ul class="site-footer__links">
+            <li><a href="capabilities.html">Capabilities</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="site-footer__cta-bar">
+        <a class="site-footer__cta" href="contact.html">Contact</a>
+      </div>
+    </footer>
+    <script src="js/main.js"></script>
+  </body>
+</html>
