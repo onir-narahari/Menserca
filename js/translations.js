@@ -81,6 +81,23 @@
     placeholders.forEach(function (el) {
       trackedAttrNodes.push({ node: el, attr: "placeholder", en: el.getAttribute("placeholder") || "" });
     });
+
+    var alts = document.querySelectorAll("img[alt]");
+    alts.forEach(function (el) {
+      var alt = el.getAttribute("alt");
+      if (alt) {
+        trackedAttrNodes.push({ node: el, attr: "alt", en: alt });
+      }
+    });
+
+    var ariaLabels = document.querySelectorAll("[aria-label]");
+    ariaLabels.forEach(function (el) {
+      if (el.hasAttribute("data-lang-toggle")) return;
+      var label = el.getAttribute("aria-label");
+      if (label) {
+        trackedAttrNodes.push({ node: el, attr: "aria-label", en: label });
+      }
+    });
   }
 
   function updateToggleButtons() {
