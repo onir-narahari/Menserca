@@ -816,24 +816,47 @@
 .home-cta-immersive__media {
   position: absolute;
   inset: 0;
+  z-index: 0;
+  overflow: hidden;
   background-color: #0a1f35;
-  background-image:
-    linear-gradient(115deg, rgba(0, 43, 91, 0.2) 0%, transparent 50%),
-    var(--cta-hero-media-image, none),
-    linear-gradient(165deg, #1a3555 0%, #0d2844 55%, #001a38 100%);
-  background-size: cover;
-  background-position: center;
+}
+
+/* Zoom past cover so wide banners never show navy pillarboxing on the sides */
+.home-cta-immersive__media img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+  transform: scale(1.22);
+  filter: brightness(1.08) contrast(1.12);
+}
+
+.home-cta-immersive__media::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(115deg, rgba(0, 43, 91, 0.2) 0%, transparent 50%);
+  pointer-events: none;
 }
 
 .home-cta-immersive__overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, rgba(0, 17, 36, 0.75) 0%, rgba(0, 26, 56, 0.82) 50%, rgba(0, 17, 36, 0.92) 100%);
+  z-index: 1;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 17, 36, 0.75) 0%,
+    rgba(0, 26, 56, 0.82) 50%,
+    rgba(0, 17, 36, 0.92) 100%
+  );
+  pointer-events: none;
 }
 
 .home-cta-immersive .content-well {
   position: relative;
-  z-index: 1;
+  z-index: 2;
   text-align: center;
 }
 
