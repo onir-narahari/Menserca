@@ -275,7 +275,7 @@ window.MensercaPhraseMapEs = {
   "Large-scale replacement of corroded lines (up to ~20 km coverage)": "Reemplazo a gran escala de líneas corroídas (hasta ~20 km de cobertura)",
   "Laser alignment": "Alineación láser",
   "Laser alignment; equipment balancing": "Alineación láser; balanceo de equipos",
-  "Light vehicles": "Vehículos ligeros",
+  "Vehicles": "Vehículos",
   "Lighting systems": "Sistemas de iluminación",
   "Local content and communities": "Contenido local y comunidades",
   "Logistics": "Logística",
